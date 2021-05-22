@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Vũ trụ Poker</title>
+<meta name="description" content="Diễn đàn chia sẻ kiến thức lập trình, chia sẻ để cuộc sống trở nên tốt đẹp hơn.">
+<meta name="keywords" content="kien thuc, chia se kien thuc, kien thuc lap trinh, share code">
+<meta name="author" content="Onjs">
+<meta name="language" content="Vietnamese">
+<meta name="copyright" content="Onz Corp.">
+<meta name="rating" content="general">
+<meta name="revisit-after" content="7 days">
+<meta name="robots" content="all,index,follow">
+<meta name="theme-color" content="#505050">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="data/poker__on.js?222"></script>
+<script src="data/poker__js.js?232"></script>
+
+<div id="body">
+<div id="poker" class="poker">
+<div class="poker-top">
+<ul class="pok-user">
+<li id="play--1">
+<ul class="man">
+<li><ul class="manx"><li class="man-abc"><img src="//:0"/></li><li class="man-coin"></li><li></li></ul></li>
+<li><span class="man-obj"></span></li>
+</ul>
+</li>
+
+<li><span id="boss"><img title="Dealer" src="//:0"/></span><br><span id="bets">0</span></li>
+
+<li id="play--2">
+<ul class="man">
+<li><ul class="manx"><li class="man-abc"><img src="//:0"/></li><li class="man-coin"></li><li></li></ul></li>
+<li><span class="man-obj"></span></li>
+</ul>
+</li>
+</ul>
+
+<ul class="pok-stt"><li><br></li><li style="font-size:14px"></li><li><br></li></ul>
+</div>
+
+<div class="poker-center" style="height:128px"><canvas width="888" height="128" style="width:100%;height:100%;position:absolute"></canvas><span class="pok-dealer" style="top:-5px;left:25%"></span><span class="pok-cards"><span class="cdx"></span><span class="cdx"></span><span class="cdx"></span><span class="cdx"></span><span class="cdx"></span></span></div>
+
+
+<div class="poker-bottom">
+<ul class="pok-stt"><li><br></li><li><br></li><li><br></li></ul>
+
+<ul class="pok-user">
+<li id="play--5">
+<ul class="man">
+<li><ul class="manx"><li class="man-abc"><img src="//:0"/></li><li class="man-coin"></li><li></li></ul></li>
+<li><span class="man-obj"></span></li>
+</ul>
+</li>
+<li id="play--4">
+<ul class="man">
+<li><ul class="manx"><li class="man-abc"><img src="//:0"/></li><li class="man-coin"></li><li></li></ul></li>
+<li><span class="man-obj"></span></li>
+</ul>
+</li>
+<li id="play--3">
+<ul class="man">
+<li><ul class="manx"><li class="man-abc"><img src="//:0"/></li><li class="man-coin"></li><li></li></ul></li>
+<li><span class="man-obj"></span></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="poker-foot">
+<p id="b_foot"><button name="Fold" onclick="Poker.job(this.name)"></button> <button name="00" onclick="Poker.job(this.name)"></button> <span><button name="69" onclick="Poker.job(this.name)"></button><br><span data-oo="*"></span></span></p>
+
+<p style="padding:9px"><a class="icon" onclick="Poker.cfg('setti')" style="width:24px;height:26px;display:inline-block"><img style="width:24px;height:24px" src="http://www.onjs.in/poker/coin/chip_1.png"></a> &nbsp; &nbsp;  <label for="pok--auto">Auto <input id="pok--auto" type="checkbox" onclick="Poker.cfg('auto',this.checked)"></label></p>
+
+</div>
+</div>
+<style>
+html{font-family:arial,sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{color:#fff;line-height:1.5;font-size:16px;text-rendering:optimizeLegibility;padding:0;margin:0;word-wrap:break-word;background:linear-gradient(to top right,rgb(2,26,37),#0a404d,rgb(2,26,37));overflow-x:hidden;width:100%;}
+
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+a{cursor:pointer}
+a.icon{outline:2px solid transparent;display:inline-block;transition:outline .4s ease}
+a.icon:hover{outline-color:#ccc}
+img{width:auto;max-width:100%;height:auto}
+p,pre{margin:0}
+pre{display:inline-block}
+input,select,textarea{color:#222;font-size:15px;background:transparent;padding:9px 7px;border:1px solid rgb(183, 185, 188);border-top-color:rgb(161, 165, 169);border-left-color:rgb(161, 165, 169);border-radius:4px;margin:4px 0 6px;display:inline-block;outline:none}
+input,textarea{width:91%;max-width:609px}
+input:focus,textarea:focus{border-bottom-color:rgb(11, 165, 169)}
+input[type='image'],input[type='checkbox'],input[type='radio']{width:auto;padding:3px;margin:0 5px;border:none;box-shadow:none;display:inline-block;outline:none}
+button{background:#55a5d3;color:#fff;border-radius:10px;min-width:69px;min-height:28px;padding:4px 3px;vertical-align:top;font-size:15px;margin:0 13px 0 0;outline:none;border:none;border-bottom:1px solid transparent}
+button:hover,button:focus{border-bottom-color:black}
+
+#body{width:100%;max-width:888px;padding:0;margin:19px auto;position:relative;overflow-x:auto}
+#body{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+
+.poker{width:100%;min-width:666px}
+.poker.poker_rel{min-height:50vh;position:relative;}
+.poker.poker_rel:before{text-align:center;content:'Reload...';width:100%;position:absolute;top:30%;left:0}
+.poker.poker_rel>*{visibility:hidden}
+
+.poker-center{position:relative;z-index:9992}
+.poker-center>.pok-cards{text-align:center;width:296px;height:66px;display:inline-block;margin:0;position:absolute;left:calc(50% - 148px);top:23px}
+.poker-center>.pok-dealer{width:9px;height:9px;display:inline-block;background:#d482af;border-radius:50%;position:absolute}
+
+.poker-top{padding:0 1em;height:183px;border-bottom:1px dotted #444;border-radius:0 0 6% 6%}
+.poker-top>ul.pok-user,.poker-bottom>ul.pok-user{width:100%;height:calc(100% - 50px);padding:0;display:table;table-layout:fixed;margin:0}
+.poker-top>ul.pok-user>li,.poker-bottom>ul.pok-user>li{width:auto;text-align:center;display:table-cell;border-spacing:0;padding:0 8px;border-collapse:separate;margin:0;vertical-align:bottom;list-style:none}
+.poker-top>ul.pok-user>li:nth-child(2){vertical-align:top;border:1px solid #555;border-width:0 1px}
+.poker-bottom{height:180px;border-top:1px dotted #444;border-radius:6% 6% 0 0}
+.poker-bottom>ul.pok-user>li:nth-child(2){width:36%;border:1px solid #555;border-width:0 1px}
+
+.poker-top>ul.pok-stt,.poker-bottom>ul.pok-stt{width:100%;height:50px;padding:0;display:table;table-layout:fixed;margin:0}
+.poker-top>ul.pok-stt>li,.poker-bottom>ul.pok-stt>li{width:auto;text-align:center;display:table-cell;border-spacing:0;border-collapse:separate;margin:0;list-style:none;padding:0;vertical-align:middle;letter-spacing:1px;font-size:13px;font-family:Verdana;height:100%;white-space:pre;transition:opacity .5s ease;color:#fff;}
+.poker-top>ul.pok-stt>li:before{content:' 'attr(data-tt)' '}
+.poker-top>ul.pok-stt>li:after{color:#f5d67b;content:" "attr(data-mm)" "}
+.poker-bottom>ul.pok-stt>li:after{content:' 'attr(data-tt)' '}
+.poker-bottom>ul.pok-stt>li:before{color:#f5d67b;content:" "attr(data-mm)" "}
+
+.pok-stt>li[data-tt='Fold'],.pok-stt>li[data-tt='Repay']{color:slategray!important}
+.pok-stt>li[data-tt=''],.pok-stt>li:not([data-tt]){opacity:0}
+
+.cdx{text-align:right;image-rendering:-webkit-optimize-contrast;width:46px;height:65px;display:inline-block;background:url(http://onjs.000space.com/data/poker/02_25_1237__0.png);background-size:378px auto;transition:transform .45s ease-out}
+.cdx.cdxx{filter:brightness(55%);z-index:-1}
+.cdx.cdyy,.cdx.cdzz{transform:translateY(-30px)}
+.cdx.cdzz{box-shadow:0px 2px 3px orange}
+.poker-center>.pok-cards>span{margin:0 5px}
+
+#boss{width:123px;height:56px;display:inline-block;background:url(http://www.onjs.in/poker/coin/chip_1.png) left bottom no-repeat;background-size:19px;margin-bottom:8px}
+#boss>img{width:auto;max-width:66px;height:auto;max-height:100%;display:inline-block}
+#bets{color:#f5d67b;font-size:14px;font-family:Verdana}
+
+.man{width:100%;height:100%;padding:0 2px 3px;display:table;table-layout:fixed;margin:0}
+.man>li{width:auto;height:100%;text-align:left;display:table-cell;border-spacing:0;padding:0;border-collapse:separate;margin:0;vertical-align:bottom;list-style:none}
+.man>li:first-child{padding-right:5px}
+.man>li:last-child{padding-left:4px;padding-bottom:10px}
+
+.manx{border-radius:25% 25% 0 16px;background:rgb(11,11,11,.15);width:96px;height:auto;padding:0;margin:0;margin-left:auto}
+.manx>li{font-size:14px;white-space:pre;border-spacing:0;padding:0;border-collapse:separate;margin:0;vertical-align:bottom;list-style:none}
+.manx>li.man-abc{width:auto;height:77px;border-bottom:1px solid rgba(11,11,11,.1);padding:6px 5px 0}
+.manx>li.man-abc>img{width:auto;max-width:68px;height:auto;max-height:66px;display:inline-block;vertical-align:middle}
+
+.manx>li.man-coin{color:#fff;padding:2px 4px 0}
+.manx>li:last-child{text-align:right;color:#f5d67b;padding:0 8px 1px;}
+.manx>li:last-child>span{animation:show .8s linear}
+.manx>li:before{content:' '}
+
+.man>li>.man-obj{width:76px;height:68px;display:block;position:relative}
+.man>li>.man-obj>*{opacity:0}
+.man>li>.man-obj[data-sc='1']>a{opacity:1}
+.man>li>.man-obj[data-sc='2']>span.cdx{opacity:1!important}
+.man>li>.man-obj>span.cdx{position:absolute;left:0;opacity:0;transition:transform .45s ease-out, opacity .4s ease-out}
+.man>li>.man-obj>span.cdx:last-child{transform:translate(30px,4px);border-left:1px solid #888}
+.man>li>.man-obj>span.cdyy:last-child,.man>li>.man-obj>span.cdzz:last-child{transform:translate(37px,-25px)}
+.man>li>.man-obj>a{width:36px;height:38px;display:inline-block;margin-top:8px;margin-left:4px;opacity:0;transition:opacity .5s ease-in}
+.man>li>.man-obj>a:before,.man>li>.man-obj>a:after{width:24px;height:35px;content:'';background:url(http://onjs.000space.com/data/poker/02_25_1237__0.png) no-repeat;background-size:200px auto;display:inline-block;position:absolute}
+.man>li>.man-obj>a:before{transform:rotate(-27deg)}
+.man>li>.man-obj>a:after{transform:translateX(10px) rotate(27deg)}
+
+.poker-foot{min-width:666px;margin:23px 0}
+#b_foot{text-align:center;pointer-events:none}
+#b_foot.b_foot_b{pointer-events:auto}
+#b_foot button{min-width:69px;min-height:28px;padding:4px 3px;vertical-align:top}
+#b_foot button[name='Fold']{background:#b34f05}
+#b_foot button:before{content:attr(name);text-transform:uppercase}
+#b_foot button:hover,#b_foot button:focus{border-bottom-color:#fff}
+
+#b_foot span{width:69px;display:inline-block}
+#b_foot span>span{font-size:15px;color:#303030;min-height:28px;background:url(http://www.onjs.in/poker/coin/chip_2.png) 99% center no-repeat;background-size:17px;background-color:#fff;width:262px;padding:3px 26px;margin-top:3px;border-radius:6px;display:inline-block;text-align:right;visibility:hidden}
+#b_foot span:hover>span{visibility:visible}
+#b_foot span>span::before{content:attr(data-oo)}
+#b_foot:not(.b_foot_b)>*{opacity:.6}
+#b_foot>*{transition:all .4s ease-out}
+
+.popup{overflow-x:hidden;overflow-y:auto;position:fixed;left:0px;top:0px;width:auto;height:auto;background-color:rgba(0,0,0,.3);opacity:0;visibility:hidden;-webkit-transition:opacity 0.3s 0s, visibility 0s 0.3s;-moz-transition:opacity 0.3s 0s, visibility 0s 0.3s;transition:opacity 0.3s 0s, visibility 0s 0.3s;z-index:999999}
+.popup.popup_visible{width:100%;height:100%;opacity:1;visibility:visible;-webkit-transition:opacity 0.3s 0s, visibility 0s 0s;-moz-transition:opacity 0.3s 0s, visibility 0s 0s;transition:opacity 0.3s 0s, visibility 0s 0s}
+.popup>*{position:relative;overflow-x:hidden;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;transition-property:transform;-webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;transition-duration:0.3s}
+
+.popup>.popup-con{color:#303030;width:83%;max-width:404px;min-height:169px;overflow-y:auto;padding:45px 16px;margin:4em auto;background:#ebeced;border-radius:.3em .3em .4em .4em;text-align:center;box-shadow:0 0 20px rgba(0,0,0,.20)}
+.popup>.popup-con>.popup--close{position:absolute;top:5px;right:8px;padding:0;display:inline-block;text-align:center;width:28px;height:24px;border-radius:20%}
+.popup>.popup-con>.popup--close:after{color:#2fa5c0;content:'2014'}
+.popup>.popup-con>.popup--close:hover{background:#ddd}
+.popup>.popup-con.popup-con-top{width:100%;max-width:100%;height:auto;min-height:auto;padding:1px 12px;border-radius:1px;margin:4px auto 0}
+.popup>.popup-con a,.popup>.popup-con label{color:#23497c;text-decoration:none;cursor:pointer}
+.popup>.popup-con a:hover,.popup>.popup-con label:hover{color:#d2691e}
+
+.poker-tx{width:100%;text-align:center;background:#ddd;border-top:1px solid #ccc;border-radius:8px}
+.poker-tx>ul{width:100%;display:table;table-layout:fixed;margin:0;padding:0}
+.poker-tx>ul>li{width:50%;display:table-cell;border-spacing:0;padding:12px 10px;border-collapse:separate;margin:0;vertical-align:middle;}
+.poker-tx>ul>li:last-child{border-left:1px solid #c5c5c5}
+.poker-tx>ul>li>span{padding:0px 0 10px;display:inline-block}
+.poker-tx>ul>li>span:after{content:attr(data-tt);color:#069;font-weight:bold;font-size:15px}
+.poker-tx>ul>li>span:last-child:after{color:#d2691e}
+
+.poker-ty{font-size:13px;text-align:right;background:#ddd;height:74px;padding:15px 12px 0;border-radius:8px 8px 0 0;box-sizing:border-box;position:relative}
+.poker-ty:after{content:'Max 'attr(data-max);padding:14px 0 0;display:inline-block}
+.poker-ty:before{content:'';width:100%;height:15px;background:#55a5d3;display:block}
+.poker-ty>span{width:24px;height:27px;background:#222;border:1px solid #b34f05;display:inline-block;position:absolute;left:0;top:11px;transition:transform .1s ease}
+.poker-ty>span:hover{background:#000}
+
+.poker-center>canvas{letter-spacing:1px;width:100%;height:100%}
+@keyframes show{
+0%{opacity:.1}
+100%{opacity:1}
+}
+@media only screen and (min-height:833px){
+#body{margin-top:2em}
+}
+@media only screen and (min-height:900px){
+#body{margin-top:4em}
+.popup>.popup-con{margin:5em auto}
+}
+@media only screen and (min-height:1000px){
+#body{margin-top:5em}
+}
+</style>
+</body >
+</html>
