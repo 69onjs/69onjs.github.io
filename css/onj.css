@@ -36,8 +36,8 @@ form.f_fc input[type=submit]{width:auto;min-width:69px;padding:5px 11px;margin-l
 #header>ul{width:100%;max-width:818px;padding:0 17px 0 14px;display:table;table-layout:fixed;margin:0 auto;position:relative}
 #header>ul>li{width:33%;display:table-cell;border-spacing:0;padding:0;border-collapse:separate;margin:0;vertical-align:middle;list-style:none}
 #header>ul>li:last-child{color:#555;text-align:right}
-#header>ul>li#header__o{text-align:center}
-#header>ul>li#header__o>a{color:#555;font-size:19px;font-weight:bold;text-shadow:0 1px 
+#header>ul>li.owo__o{text-align:center}
+#header>ul>li.owo__o>a{color:#555;font-size:19px;font-weight:bold;text-shadow:0 1px 
 0 #f1f2f3;padding:5px 4px;display:inline-block}
 #header>ul .ow__io{width:30px;height:30px;display:inline-block;padding:6px;margin-right:8px;vertical-align:top}
 #header>ul .ow__io:before{content:'';display:inline-block;width:18px;height:18px;border:2px solid #505050}
