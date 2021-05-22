@@ -387,11 +387,16 @@ cus.core.a(a.type), c=$(m), Z.head.event(c.find('a[data-onjs]'), c.find('img.oo_
 }
 };
 $(doc).ready(()=>{
+$('#header').append('<ul><li><a id="owo--m" class="ow__io"><span></span></a><a id="owo--p" class="box-28" href="javascript:history.back()"><svg viewBox="0 0 24 24"><polyline points="16,5 8,12 16,19" style="fill:none;stroke:currentColor;stroke-width:2"></polyline></svg></a></li><li class="owo__o"><a data-onjs href="/" title="Onjs"><b style="color:#4285F4">Z</b>.<b style="color:#FBBC04">onjs</b>.<b style="color:#4285F4">In</b></a></li><li><span id="owo--s" class="box-28"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></span></li></ul>');
+  
+  
 doc.body.appendChild($0.popjs.__[0]);
+  /*
 w.onhashchange=function(){loc.jav==o_o&&loc.hash!==o_o&&$0.popup(),loc.jav=loc.hash};
 w.onpopstate=function(e){new Z.on(1)};
 Z.onjs({onz:/onjs/, cf:'#onjs'});
 new Z.on(0), Z.head.event($('a[data-onjs]'), $('img.oo__img'))
+*/
 });
 w.alert=function(a,c){c=dom('pre'),c.style.margin='0px',c.textContent=a,$0.popup({69:{rgba:.3},on:c})};
 }) (window, jQuery);
