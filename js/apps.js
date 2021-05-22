@@ -422,7 +422,7 @@ var sidrr=function(t){
 var i=$.extend({name:"sidr",speed:350,side:"left",body:"#body",displace:!1},t),o=i.name,a=$("#"+o);
 if(!a.length){
 a=$(dom('div')).attr("id",o).addClass("sidr sidr_"+i.side).appendTo($('#body'));
-t=$(dom('ul')).html('<li><span style="height:48px;display:inline-block"><img src="https://i.imgur.com/rc67JFX.png"/></span></li><li><a href="/cat/meo-vat-cs.1/">M\u1eb9o V\u1eb7t Cs</a></li><li><a href="/cat/thu-gian.8/">Th\u01b0 gi\u00e3n</a></li>');
+t=$(dom('ul')).html('<li><span style="height:48px;display:inline-block"><img src="https://i.imgur.com/rc67JFX.png"/></span></li>');
 Z.head.event($(dom('div')).addClass('sidr-inner').append(t).appendTo(a).find('a'))
 }
 return a.data({speed:i.speed,side:i.side,body:i.body,displace:i.displace})
