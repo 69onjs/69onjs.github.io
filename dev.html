@@ -95,7 +95,7 @@ var temp={
 4: 'function%20get__css%28q%29%7B%0Avar%20d%3Ddocument%2C%20tp%3Dd.querySelector%28%27%23__abc__%27%29%2C%20z%3Dd.querySelector%28q%29%2C%20s%3Dwindow.getComputedStyle%28z%29%2C%20g%3D%5B%5D%2C%20i%3B%0Aif%28%21tp%29%7B%0Atp%3Dd.createElement%28%27div%27%29%3Btp.id%3D%27__abc__%27%3Bd.body.insertBefore%28tp%2Cd.body.firstChild%29%0A%7D%0Afor%28i%20in%20s%29%20s.hasOwnProperty%28i%29%26%26%20g.push%28%5Bs%5Bi%5D%2Cs%5Bs%5Bi%5D%5D%5D%29%3B%0Atp.innerHTML%3Dg.join%28%27@%27%29%0A%7D',
 5:"(function(){document.body.innerHTML=document.documentElement.outerHTML.replace(/</g,'&lt;')})()"
 };
-this.obj.val(temp[a])
+this.obj.val(unescape(temp[a]))
 },
 eval: function(type){
 var con=this.obj.val();
