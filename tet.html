@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Code Z | Onj</title>
+<meta name="description" content="Diễn đàn mẹo vặt cuộc sống, chia sẻ để cuộc sống trở nên tốt đẹp hơn.">
+<meta name="keywords" content="meo vat, chia se meo vat, meo vat cuoc song">
+<meta name="author" content="Onjs">
+<meta name="language" content="Vietnamese">
+<meta name="copyright" content="Onz Corp.">
+<meta name="rating" content="general">
+<meta name="revisit-after" content="7 days">
+<meta name="robots" content="all,index,follow">
+<meta name="theme-color" content="#696969">
+<link rel="stylesheet" href="/css/onj.css" media="all">
+<link rel="icon" href="/css/5s.png">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/apps.js"></script>
+<div id="body">
+<div id="header"></div>
+  <div id="body-js">
+<main id="main">
+  <div id="time" class="phdr"><input id="run__jsl"/></div>
+<div class="menu center">
+<textarea id="run__jsc" name="DT" rows="12"></textarea>
+</div>
+
+
+<div class="menu center" style="position:relative"><span style="font-size:15px;float:left;position:absolute;top:6px;left:12px;"><a onclick="Runjs.jsc.value='';">Del JsC</a> . <a onclick="Runjs.jdom.value='';">Del Dom</a></span> 
+<a onclick="Runjs.cmd()"  style="width:69px;padding:5px 15px;background:#f1f2f3;display:inline-block"><img id="dev__jav" style="width:24px;" src="/icon/bug.svg"/></a>
+</div>
+
+<div class="menu center">
+<textarea id="run__dom" rows="10"></textarea>
+</div>
+
+<div class="menu center bold" style="height:280px;padding:5px">
+<p class=""><a onclick="Runjs.save()" style="color:#777">Save content</a> &nbsp; . &nbsp <a onclick="Runjs.save(1)">Load saved</a></p>
+</div>
+<script>
+(function(w){
+w.onkeyup=function(e){(e.keyCode==27)&&Runjs.cmd()};
+w.Runjs={
+zz:null,
+jsl:$('#run__jsl')[0],
+jsc:$('#run__jsc')[0],
+jdom:$('#run__dom')[0],
+cmd:function(){
+var that=this, z=w.open('','_blank'), zdoc=z.document, zdom=zdoc.createElement.bind(zdoc);
+var el, sl=this.jsl.value.trim().split('^^'), i=sl.length;
+this.zz=z;
+z.onkeyup=function(e){(e.keyCode==27)&&this.close()};
+zdoc.title='69onjs';
+el=zdom('meta'), el.httpEquiv='Content-Type', el.content='text/html;charset=utf-8', zdoc.head.appendChild(el), el=zdom('meta'), el.name="viewport", el.content="width=device-width,initial-scale=1.0", zdoc.head.appendChild(el);
+zdoc.body.innerHTML=this.jdom.value;
+getJs(sl, 0);
+function getJs(sl,i){
+if(!sl[i]){
+el=zdom('script'), el.textContent=that.jsc.value, zdoc.body.appendChild(el);
+return!1
+}
+el=zdom('script'), el.src=sl[i], zdoc.head.appendChild(el);
+el.onload=function(){getJs(sl,++i)};
+el.onerror=function(){z.alert('Error load Js file: '+this.src)};
+}
+},
+save:function(x){
+var stl={};
+try{stl=w.localStorage||stl}catch(l){}
+if(x){
+this.jsl.value=stl.run__jsl;
+this.jsc.value=stl.run__jsc;
+this.jdom.value=stl.run__jdom;
+return!1
+}
+this.jsl.value&&(stl.run__jsl=this.jsl.value);
+this.jsc.value&&(stl.run__jsc=this.jsc.value);
+this.jdom.value&&(stl.run__jdom=this.jdom.value);
+alert('Saved!');
+}
+};
+}(this));
+</script>
+<style>
+.sidr{display:none}
+input,textarea{color:#222;line-height:1.7;font-size:16px;width:98%;max-width:98%}
+</style>
+    </main>
+  </div>
+  </div>
+  </body>
+</html>
