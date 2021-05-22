@@ -81,7 +81,7 @@ e&&this.obj.val(e.innerHTML)
 str: function(a){
 if(!a){
 a=$(document.createElement('p')).html($('#dev__cl').html());
-$('#dev__div').append(a);
+return $('#dev__div').append(a);
 }
 var temp={
 10: 'window.__abc%3D%5B%5D%2C%20Element.prototype._appendChild%3DElement.prototype.appendChild%3B%0AElement.prototype.appendChild%3Dfunction%28a%2Cb%29%7B%0Awindow.__abc.push%28%5Bthis%2Ca%5D%29%3B%0Areturn%20this._appendChild%28a%2Cb%29%0A%7D',
