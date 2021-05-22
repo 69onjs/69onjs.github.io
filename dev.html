@@ -104,29 +104,8 @@ if(!con) return $('#jss').val(ob[type]);
 var s=document.createElement({js:'script',div:'div'} [type]);
 s[type=='div' ? 'innerHTML' : 'textContent']=con;
 $('#dev__'+type).empty().append(s);
-},
-set: function(){
-var oa={}, ob={}, i=1, m=$('#jss').val().trim().split(/\n/);
-if(m.length<2) return this.get();
-oa.type=m[0].substr(0,1)=='@'?1:0;
-oa.uri=oa.type?m[0].substr(1):m[0];
-for(;i<m.length;i++){
-var key=m[i].split('@');
-ob[key[0]]=key[1]||'text';
-}oa.data=ob;
-sessionStorage.jss2=JSON.stringify(oa);
-return this.get()}, 
-get: function(al){
-if(!sessionStorage.jss2) return !al?alert(null):null;
-var a, ele, foj=$('#fojs').el(), oa=JSON.parse(sessionStorage.jss2), ob=oa.data;
-$(foj).del().yos({class:'menu center',action:oa.uri,method:oa.type?'get':'post',target:'_blank'});
-for(a in ob) {
-ele=document.createElement('input');
-ele.name=a.trim(),ele.type=ob[a],ele.value=a?a:'_69onjs_';
-foj.appendChild(ele);
-foj.appendChild(document.createElement('br'));
-foj.appendChild(document.createElement('br'));
-}}}; Js2.get(1);
+}
+};
 </script>
 </main>
 </div>
