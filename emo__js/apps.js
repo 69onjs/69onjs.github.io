@@ -151,8 +151,9 @@ head:{
     /*
     c=$0.print('/tag./%s', a.q.value.replace(/[\.\/]/g,'').trim().replace(/\s+/g,'+'));
 if(200>c.length&&c.length>6){Z.onjs.a ? (new Z.on(2, null, [c, ''])) : w.open(c, '_self');
-!!b && $0.popup(0)}a.q.blur && a.q.blur();
+!!b && $0.popup(0)}
 */
+a.q.blur && a.q.blur();
 return !1},
   
 event:function(a){a.on('click', function(b){new Z.on(2, b, [this.pathname, this.search, this.hash])})}},
