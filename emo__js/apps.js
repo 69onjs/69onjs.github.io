@@ -146,10 +146,15 @@ return 'page/1';
 6969: {a:/^6969~/, b:0, c:0},
 page: {a:/^page\/(\d*)/, b:'home', c:2, d:'home'},
 emoji: {a:/^emoji\/(\w+)\.?(\d*)/, b:'%1', c:2, d:'art'},}},
-head:{tags:function(a,b,c){c=$0.print('/tag./%s', a.q.value.replace(/[\.\/]/g,'').trim().replace(/\s+/g,'+'));
+head:{
+  tags:function(a,b,c){
+    /*
+    c=$0.print('/tag./%s', a.q.value.replace(/[\.\/]/g,'').trim().replace(/\s+/g,'+'));
 if(200>c.length&&c.length>6){Z.onjs.a ? (new Z.on(2, null, [c, ''])) : w.open(c, '_self');
 !!b && $0.popup(0)}a.q.blur && a.q.blur();
+*/
 return !1},
+  
 event:function(a){a.on('click', function(b){new Z.on(2, b, [this.pathname, this.search, this.hash])})}},
 debug:function(a,b){var c=this.cfg.bug, d=null;
 if(!a){c.some(e=>{!!e && (e>0 ? clearTimeout(e) : e(69))});
