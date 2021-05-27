@@ -228,7 +228,7 @@ Z.cfg.do=$0.json($('#data__js').html());
 Z.onjs.in({onz:'onjs', cfg:'#onjs', main:'#apps__b'});
 if(!Z.onjs.a) return;
 new Z.on(0, history.state);
-w.onhashchange=function(a){$0.popup(),new Z.on(1, a.state)};
+w.onpopstate=function(a){$0.popup(),new Z.on(1, a.state)};
 Z.head.event($('a[data-onjs]'))});
 
 $(doc).ready(function(){
