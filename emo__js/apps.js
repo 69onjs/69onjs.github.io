@@ -153,6 +153,7 @@ head:{
 if(200>c.length&&c.length>6){Z.onjs.a ? (new Z.on(2, null, [c, ''])) : w.open(c, '_self');
 !!b && $0.popup(0)}
 */
+$0.popup(0);
 a.q.blur && a.q.blur();
 return !1},
   
