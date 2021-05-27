@@ -230,5 +230,5 @@ $(w).resize(function(){var bw=850, sw=($(doc).width()-bw)/2-mw;
 sw>0?(c==sw||(c=sw, m.css({left:(sw>9?sw-8:0)+'px'}).fadeIn())):(c==0||(c=0, m.hide())) }).resize();
 
 })
-alert(99)
+
 }) (window);
