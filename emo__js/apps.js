@@ -82,7 +82,7 @@ var d=a.data.split(',');
 var g='', i=d.length;
 var l=this.limit, s=(this.pg-1)*l;
 var j=s+l > i ? i : s+l;
-var ob={url:'#%s',page:this.pg,total:i,limit:l};
+var ob={url:loc.hash.replace(/\.\d*$/,'')+'.%s',page:this.pg,total:i,limit:l};
 this.cf={d:d,min:s,max:j-1,i:~0};
 while(s < j){
 g+=$0.print(b, s, d[s++]);
@@ -141,8 +141,8 @@ b: {},
 c: {},
 e: {$0: /^(\w+)/,
 $1: function(a){
-if(/^.{0,1}$|^index\./.test(a)) return 'page/1';
-return 'index'},
+return 'page/1';
+},
 6969: {a:/^6969~/, b:0, c:0},
 page: {a:/^page\/(\d*)/, b:'home', c:2, d:'home'},
 emoji: {a:/^emoji\/(\w+)\.?(\d*)/, b:'%1', c:2, d:'art'},}},
@@ -160,7 +160,8 @@ on: function(a,b,c){if(2>a) c=[loc.pathname, loc.search, loc.hash];
 return this.init(a,b,c)}};
 
 Z.on.prototype={
-abc: null,main: null,
+abc: null,
+main: null,
 
 exec: function(s,ss,z){
 var a=Z.core, b, c;
