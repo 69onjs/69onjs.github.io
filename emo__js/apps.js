@@ -127,12 +127,14 @@ return {title:'Emoji Onjs | Onj', name:'Emoji Onjs', content:$0.print(__a,__c)};
 };
 
              
-w.Z={onjs: {a:0, m:0,in: function(a,b){b=$0.json($(a.cfg).text());
+w.Z={
+  onjs: {a:0, m:0,
+ in: function(a,b){b=$0.json($(a.cfg).text());
 this.a=(loc.host.indexOf(a.onz)>=0) && b.a;
 this.m=b.b;
 Z.on.prototype.main=$(a.main);
 }},
-cfg: {bug:[], dm:[], sc:[], o:{id:0}, do:null},
+cfg: {bug:[], dm:[], sc:[], o:{id:0}, do:null, od:null},
 core:{a: function(){var a=this.b, b=a.a;
 if(!b) return;
 'art'==b && Art.app(a.b,a.c);
@@ -193,8 +195,9 @@ this.wait(2);
 return loc.reload()}
   if(2==a){
     b && b.preventDefault();
-loc.href==u||history.pushState(null, 'Onjs', u)
+Z.cfg.od==u||history.pushState(null, 'Onjs', u)
   }
+  Z.cfg.od=u;
   a>0&&this.wait(1,a);
 Z.debug(()=>{this.$dom(Art.init(Z.cfg.do,e.b,e.a),a)}, 0==a?0:500)},
 
