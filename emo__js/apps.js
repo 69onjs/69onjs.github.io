@@ -186,11 +186,16 @@ a && Z.debug(null);
 a>0 && w.stop && w.stop();
 var d=Z.cfg, u=c.join(''), e=this.exec(c[2].replace(/^#\/?/,''), c[1], c[2]);
 this.abc=a,Art.cf={i:~0};
-if(e.c==0){if(2==a) return;
+if(e.c==0){
+  if(2==a) return;
 this.main.empty();
 this.wait(2);
-return loc.reload()}if(2==a){b && b.preventDefault();
-history.pushState(null, 'Onjs', u)}a>0&&this.wait(1,a);
+return loc.reload()}
+  if(2==a){
+    b && b.preventDefault();
+loc.href==u||history.pushState(null, 'Onjs', u)
+  }
+  a>0&&this.wait(1,a);
 Z.debug(()=>{this.$dom(Art.init(Z.cfg.do,e.b,e.a),a)}, 0==a?0:500)},
 
 get: function(a,b,c){Z.debug($.getJSON({url:c}).done(function(d){a.wait(3).csdl(b, d);
