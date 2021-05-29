@@ -10,7 +10,7 @@ popup:function(a,b){if(!a&&this.popjs.__.click()) return;
 if(!(typeof a=='object')) return this.popup(this.popjs[a]);
 b=$(doc.createElement('div')).addClass('popup-container');
 !!a[69]&&b.addClass('popup-container-full');
-this.popjs.__.append(b).addClass('popup_visible')[0].style.backgroundColor='rgba(0,0,0,'+(o.rgba||.25)+')';
+this.popjs.__.append(b).addClass('popup_visible')[0].style.backgroundColor='rgba(0,0,0,'+(a.rgba||.25)+')';
 b.append(a.on)&&!a[69]&&b.append('<a class="popup-close"></a>');
 typeof a.js=='function'&&a.js(b);
 return b},
