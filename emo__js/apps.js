@@ -4,9 +4,11 @@
 if(w.$==void 0) return;
 var doc=w.document, loc=w.location;
 var stl=w.navigator.cookieEnabled ? w.localStorage : {};
-w.$0={popjs:{__: $(doc.createElement('div')).on('click', function(a){if($(a.target).is('.popup-close') || $(a.target).is('.popup')){a.preventDefault();
-$(this).removeClass('popup_visible').empty()}}).addClass('popup'),$z: {on:'<p class="center"><a href="https://drive.google.com/folderview?id=1aLksBNqk868GqWilXN4fQWpHxerJEQBc">Emoji Onjs</a><br><br><img src="https://i.imgur.com/28NOo1g.gif" alt=""/></p>'},$s: {69:!0,on:'<form onSubmit="return Z.head.tags(this,1)" method="post"><ul class="search"><li><input name="q" type="search" maxlength="99" placeholder="B\u1ea1n c\u1ea7n g\u00ec?"/></li><li><button class="svg-28" type="submit"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button></li></ul></form>',js:a=>{setTimeout(()=>{a.find('input').focus()}, 0)}}},
-popup:function(a,b){if(!a&&this.popjs.__.click()) return;
+w.$0={popjs:{__: $(doc.createElement('div')).on('click', function(a){
+  if($(a.target).is('.popup-close') || $(a.target).is('.popup')){a.preventDefault();
+$(this).removeClass('popup_visible').empty(),w.onkeyup=null}}).addClass('popup'),$z: {on:'<p class="center"><a href="https://drive.google.com/folderview?id=1aLksBNqk868GqWilXN4fQWpHxerJEQBc">Emoji Onjs</a><br><br><img src="https://i.imgur.com/28NOo1g.gif" alt=""/></p>'},$s: {69:!0,on:'<form onSubmit="return Z.head.tags(this,1)" method="post"><ul class="search"><li><input name="q" type="search" maxlength="99" placeholder="B\u1ea1n c\u1ea7n g\u00ec?"/></li><li><button class="svg-28" type="submit"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button></li></ul></form>',js:a=>{setTimeout(()=>{a.find('input').focus()}, 0)}}},
+popup:function(a,b){
+  if(!a&&this.popjs.__.click()) return;
 if(!(typeof a=='object')) return this.popup(this.popjs[a]);
 b=$(doc.createElement('div')).addClass('popup-container');
 !!a[69]&&b.addClass('popup-container-full');
