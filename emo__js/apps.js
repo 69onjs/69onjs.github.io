@@ -66,7 +66,7 @@ y=$0.popjs.__,y.hasClass('popup_visible')&&(y.empty(),imgx(x,!0));
 function imgx(i,j){
 var cf=Art.cf, im=null, io=null, l='<p class="center"><img src="%0" alt=""/><br><br><br><a class="cup" data-abc="%0" onclick="Art.copy(this)">Copy()</a> &nbsp; | &nbsp; <a class="cup" data-abc="[img]%0[/img]" onclick="Art.copy(this)">[img]</a></p>';
 cf.i=+i, im='https://i.imgur.com/'+cf.d[i], io=$0.popup({on:$0.print(l,[im])});
-j&&io.find('img').css({opacity:.3}).animate({opacity:1});
+j&&io.find('img').css({opacity:.1}).animate({opacity:1});
 
 }
 },
