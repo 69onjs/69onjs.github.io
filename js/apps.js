@@ -398,7 +398,7 @@ Z.onjs({onz:/onjs/, cf:'#onjs'});
 new Z.on(0), Z.head.event($('a[data-onjs]'), $('img.oo__img'))
 */
 });
-w.alert=function(a,c){c=dom('pre'),c.style.margin='0px',c.textContent=a,$0.popup({69:{rgba:.3},on:c})};
+w.alert=function(a,c){c=dom('pre'),c.style.margin='0px',c.textContent=a,$0.popup({69:{rgba:.3},on:''+c})};
 }) (window, jQuery);
 
 (function($){
