@@ -77,7 +77,7 @@ $0.popup({on:$0.print(l,[im])}).find('img').css({opacity:.3}).animate({opacity:1
 },
 
 dom: function(a){var b='<span><img data-x="%s" onclick="Art.pop(this)" src="https://i.imgur.com/%s" alt=""/></span>';
-var c=$('#init__c');
+var c=$('#init__c').empty();
 var d=a.data.split(',');
 var g='', i=d.length;
 var l=this.limit, s=(this.pg-1)*l;
@@ -105,7 +105,7 @@ return this.home(a,c);
 },
 art: function(a,b){b=a[b];
 if(!b) return {name:'Error 404'};
-var __a='<div class="content"><div class="con-head"><span class="con-head-img"><img src="%{img}" alt="%{name}"/></span><span class="con-head-dv">%s</span><span class="abc"><i></i></span><p class="clr"></p></div><div class="con-body"><div>%{des}</div><div id="init__c" class="con--img"></div></div></div>';
+var __a='<div class="content"><div class="con-head"><span class="con-head-img"><img src="%{img}" alt="%{name}"/></span><span class="con-head-dv">%s</span><span class="abc"><i></i></span><p class="clr"></p></div><div class="con-body"><div>%{des}</div><div id="init__c" class="con--img">$.ajax()</div></div></div>';
 var __aa='<a href="%{dl.url_%s}">%{dl.name_%s}</a>';
 var __ab='';
 if(b.dl){__ab+=$0.print(__aa, 'a', 'a');
