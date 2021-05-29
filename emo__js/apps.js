@@ -10,7 +10,7 @@ popup:function(a,b){if(!a&&this.popjs.__.click()) return;
 if(!(typeof a=='object')) return this.popup(this.popjs[a]);
 b=$(doc.createElement('div')).addClass('popup-container');
 !!a[69]&&b.addClass('popup-container-full');
-this.popjs.__.append(b).addClass('popup_visible');
+this.popjs.__.append(b).addClass('popup_visible')[0].style.backgroundColor='rgba(0,0,0,'+(o.rgba||.25)+')';
 b.append(a.on)&&!a[69]&&b.append('<a class="popup-close"></a>');
 typeof a.js=='function'&&a.js(b);
 return b},
@@ -65,7 +65,7 @@ y=$0.popjs.__,y.hasClass('popup_visible')&&(y.empty(),imgx(x,!0));
 
 function imgx(i,j){
 var cf=Art.cf, im=null, io=null, l='<p class="center"><img src="%0" alt=""/><br><br><br><a class="cup" data-abc="%0" onclick="Art.copy(this)">Copy()</a> &nbsp; | &nbsp; <a class="cup" data-abc="[img]%0[/img]" onclick="Art.copy(this)">[img]</a></p>';
-cf.i=+i, im='https://i.imgur.com/'+cf.d[i], io=$0.popup({on:$0.print(l,[im])});
+cf.i=+i, im='https://i.imgur.com/'+cf.d[i], io=$0.popup({on:$0.print(l,[im]), rgba:.1});
 j&&io.find('img').css({opacity:.1}).animate({opacity:1});
 
 }
