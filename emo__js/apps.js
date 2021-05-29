@@ -58,20 +58,15 @@ imgx(a.dataset.x);
 
 w.onkeyup=function(e){
 var cf=Art.cf||{}, n=e.keyCode, x, y;
-
 if(!(e.target==doc.body&&(n==39||n==37)))return;
-
 x=cf.i+(n==37?-1:1), x=x<cf.min?cf.max:(x>cf.max?cf.min:x);
-
-y=$0.popjs.__,y.hasClass('popup_visible')&&(y.empty(),imgx(x));
-
+y=$0.popjs.__,y.hasClass('popup_visible')&&(y.empty(),imgx(x,!0));
 };
 
-function imgx(i){
-var cf=Art.cf, im=null, l='<p class="center"><img src="%0" alt=""/><br><br><br><a class="cup" data-abc="%0" onclick="Art.copy(this)">Copy()</a> &nbsp; | &nbsp; <a class="cup" data-abc="[img]%0[/img]" onclick="Art.copy(this)">[img]</a></p>';
-
-cf.i=+i, im='https://i.imgur.com/'+cf.d[i];
-$0.popup({on:$0.print(l,[im])}).find('img').css({opacity:.3}).animate({opacity:1});
+function imgx(i,j){
+var cf=Art.cf, im=null, io=null, l='<p class="center"><img src="%0" alt=""/><br><br><br><a class="cup" data-abc="%0" onclick="Art.copy(this)">Copy()</a> &nbsp; | &nbsp; <a class="cup" data-abc="[img]%0[/img]" onclick="Art.copy(this)">[img]</a></p>';
+cf.i=+i, im='https://i.imgur.com/'+cf.d[i], io=$0.popup({on:$0.print(l,[im])});
+j&&io.find('img').css({opacity:.3}).animate({opacity:1});
 
 }
 },
