@@ -94,7 +94,7 @@ c.append(g).append(this.page(ob));
 app:function(a,z){
 this.pg=a[2]*1;
 this.pg=this.pg>0?this.pg:1;
-var b=$0.print('/emo__data/%s.json', a[1]), c=function(){$('#init__c').html('<b>Error of Response.</b>')};
+var b=$0.print('/emo__data/%s.json', a[1]), c=function(){$('#init__c').html('<i style="color:#2fa5c0">Error of Response.</i>')};
 if(this.do[a[1]]) return this.dom(this.do[a[1]]);
 Z.debug($.ajax({url:b,dataType:'json', processData:1,timeout:1e4,error:c}).done(e=>{if(!e.type)return c.call();
 this.do[a[1]]=e;
@@ -107,7 +107,7 @@ return this.home(a,c);
 },
 art: function(a,b){b=a[b];
 if(!b) return {name:'Error 404'};
-var __a='<div class="content"><div class="con-head"><span class="con-head-img"><img src="%{img}" alt="%{name}"/></span><span class="con-head-dv">%s</span><span class="abc"><i></i></span><p class="clr"></p></div><div class="con-body"><div>%{des}</div><div id="init__c" class="con--img"><a>$.ajax()</a></div></div></div>';
+var __a='<div class="content"><div class="con-head"><span class="con-head-img"><img src="%{img}" alt="%{name}"/></span><span class="con-head-dv">%s</span><span class="abc"><i></i></span><p class="clr"></p></div><div class="con-body"><div>%{des}</div><div id="init__c" class="con--img"></div></div></div>';
 var __aa='<a href="%{dl.url_%s}">%{dl.name_%s}</a>';
 var __ab='';
 if(b.dl){__ab+=$0.print(__aa, 'a', 'a');
