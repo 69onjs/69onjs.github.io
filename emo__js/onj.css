@@ -155,8 +155,10 @@ display:inline-block
 .popup{overflow-y:auto;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0, 0.3);opacity:0;visibility:hidden;-webkit-transition:opacity 0.3s 0s, visibility 0s 0.3s;-moz-transition:opacity 0.3s 0s, visibility 0s 0.3s;transition:opacity 0.3s 0s, visibility 0s 0.3s}
 .popup.popup_visible{opacity:1;visibility:visible;-webkit-transition:opacity 0.2s 0s, visibility 0s 0s;-moz-transition:opacity 0.2s 0s, visibility 0s 0s;transition:opacity 0.2s 0s, visibility 0s 0s}
 
-.popup-container{width:83%;max-width:345px;min-height:369px;max-height:96%;overflow-y:auto;position:relative;padding:45px 16px 45px;box-sizing:border-box;margin:4em auto;background:#ebeced;border-radius:.25em .25em .4em .4em;text-align:center;box-shadow:0 0 20px rgba(0, 0, 0, 0.2);-webkit-backface-visibility:hidden;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;transition-property:transform;-webkit-transition-duration:0.2s;-moz-transition-duration:0.2s;transition-duration:0.2s}
-.popup-container.popup-container-full{width:96%;max-width:488px;min-height:auto;padding:2px 0 3px;margin-top:4px}
+.popup-container{background:#24282d;width:83%;max-width:345px;min-height:369px;max-height:96%;overflow-y:auto;position:relative;padding:45px 16px 45px;box-sizing:border-box;margin:4em auto;border-radius:.25em .25em .4em .4em;text-align:center;box-shadow:0 0 20px rgba(0, 0, 0, 0.2);-webkit-backface-visibility:hidden;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;transition-property:transform;-webkit-transition-duration:0.2s;-moz-transition-duration:0.2s;transition-duration:0.2s}
+.popup-container a{color:#92b2a5}
+.popup-container a:hover{color:#dea6aa}
+.popup-container.popup-container-full{background:#ebeced;width:96%;max-width:488px;min-height:auto;padding:2px 0 3px;margin-top:4px}
 .popup-container>.popup-close{position:absolute;top:5px;right:8px;width:30px;height:30px}
 .popup-container .popup-close:after{content:'\2014'}
 .popup.popup_visible>.popup-container{-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}
