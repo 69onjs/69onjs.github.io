@@ -152,7 +152,7 @@ display:inline-block
 .con-tab li:not(:first-child){border-left:1px solid #ccc}
 .code{color:#4285F4;padding:7px 9px;border:1px solid #ddd;border-radius:0px;margin:5px 1px 6px}
 
-.popup{overflow-y:scroll;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0, 0.3);opacity:0;visibility:hidden;-webkit-transition:opacity 0.3s 0s, visibility 0s 0.3s;-moz-transition:opacity 0.3s 0s, visibility 0s 0.3s;transition:opacity 0.3s 0s, visibility 0s 0.3s}
+.popup{overflow-y:auto;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0, 0.3);opacity:0;visibility:hidden;-webkit-transition:opacity 0.3s 0s, visibility 0s 0.3s;-moz-transition:opacity 0.3s 0s, visibility 0s 0.3s;transition:opacity 0.3s 0s, visibility 0s 0.3s}
 .popup.popup_visible{opacity:1;visibility:visible;-webkit-transition:opacity 0.2s 0s, visibility 0s 0s;-moz-transition:opacity 0.2s 0s, visibility 0s 0s;transition:opacity 0.2s 0s, visibility 0s 0s}
 
 .popup-container{width:83%;max-width:345px;min-height:369px;max-height:96%;overflow-y:auto;position:relative;padding:45px 16px 45px;box-sizing:border-box;margin:4em auto;background:#ebeced;border-radius:.25em .25em .4em .4em;text-align:center;box-shadow:0 0 20px rgba(0, 0, 0, 0.2);-webkit-backface-visibility:hidden;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;transition-property:transform;-webkit-transition-duration:0.2s;-moz-transition-duration:0.2s;transition-duration:0.2s}
