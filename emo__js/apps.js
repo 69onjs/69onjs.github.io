@@ -76,7 +76,8 @@ $0.popup({on:$0.print(l,[im])}).find('img').css({opacity:.3}).animate({opacity:1
 }
 },
 
-dom: function(a){var b='<span><img data-x="%s" onclick="Art.pop(this)" src="https://i.imgur.com/%s" alt=""/></span>';
+dom: function(a){
+  var b='<span><img data-x="%s" onclick="Art.pop(this)" src="https://i.imgur.com/%s" alt=""/></span>';
 var c=$('#init__c').empty();
 var d=a.data.split(',');
 var g='', i=d.length;
@@ -90,11 +91,12 @@ g+=$0.print(b, s, d[s++]);
 c.append(g).append(this.page(ob));
 },
 
-app:function(a,z){this.pg=a[2]*1;
+app:function(a,z){
+this.pg=a[2]*1;
 this.pg=this.pg>0?this.pg:1;
-var b=$0.print('/emo__data/%s.json', a[1]);
+var b=$0.print('/emo__data/%s.json', a[1]), c=function(){$('#init__c').html('<b>Error of Response.</b>')};
 if(this.do[a[1]]) return this.dom(this.do[a[1]]);
-Z.debug($.ajax({url:b,dataType:'json', processData:1,timeout:1e4}).done(e=>{if(!e.type) return;
+Z.debug($.ajax({url:b,dataType:'json', processData:1,timeout:1e4,error:c}).done(e=>{if(!e.type)return c.call();
 this.do[a[1]]=e;
 this.dom(e);
 }))},
@@ -105,7 +107,7 @@ return this.home(a,c);
 },
 art: function(a,b){b=a[b];
 if(!b) return {name:'Error 404'};
-var __a='<div class="content"><div class="con-head"><span class="con-head-img"><img src="%{img}" alt="%{name}"/></span><span class="con-head-dv">%s</span><span class="abc"><i></i></span><p class="clr"></p></div><div class="con-body"><div>%{des}</div><div id="init__c" class="con--img">$.ajax()</div></div></div>';
+var __a='<div class="content"><div class="con-head"><span class="con-head-img"><img src="%{img}" alt="%{name}"/></span><span class="con-head-dv">%s</span><span class="abc"><i></i></span><p class="clr"></p></div><div class="con-body"><div>%{des}</div><div id="init__c" class="con--img"><a>$.ajax()</a></div></div></div>';
 var __aa='<a href="%{dl.url_%s}">%{dl.name_%s}</a>';
 var __ab='';
 if(b.dl){__ab+=$0.print(__aa, 'a', 'a');
