@@ -41,7 +41,7 @@ footer{text-align:center;padding:4em 0}
 .search button{background-color:transparent;padding:0;border:none;margin:0}
 #back,.svg-28{text-align:center;width:32px;height:32px;padding:3px!important;display:inline-block;box-sizing:border-box}
 #back>*,.svg-28>*{width:26px;height:26px;margin:0;border:none;display:block}
-#back{background:#505050;border-radius:3px;display:none;position:fixed;top:9px;left:9px}
+#back{background:#505050;border-radius:3px;display:none;position:fixed;top:9px;left:9px;z-index:999999}
 #back:hover{background:#696969}
 /* Style.Onj */
 #onIt{margin:0 auto;display:block;box-sizing:border-box;position:relative}
